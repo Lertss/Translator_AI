@@ -31,7 +31,3 @@ app.add_middleware(
 @app.get("/index", response_class=HTMLResponse)
 def index(request:Request):
     return templates.TemplateResponse("index.html", {"request":request})
-
-# @app.post("/translate", response_model=schemas.TaskResponse)
-# def translate(request: schemas.TranslationRequest):
-#     # task = crud.create_translation_task(get_db.db, request.text, request.languages)
