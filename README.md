@@ -32,6 +32,7 @@ dotenv — environment variable management
 ✅ CORS support for frontend integration.
 
 📁 Project Structure  
+```
 .  
 ├── app/  
 │   ├── main.py                # FastAPI main application  
@@ -44,35 +45,43 @@ dotenv — environment variable management
 │   │   └── results.html       # Results page template  
 ├── database.py                # Database connection and session  
 ├── .env                       # Environment variables config  
+```
 🚀 Quick Start  
 Clone the repository  
-  
+```
 git clone https://github.com/Lertss/Translator_AI
 cd translator-service
+```
 Create a virtual environment and install dependencies
-  
 
+```
 python -m venv venv  
 source venv/bin/activate  
 pip install -r requirements.txt  
+```
 Create .env file  
+```
+DATABASE_URL='sqlite:///./translations.db'  
+OPENAI_API_KEY='your_api_key'
+```
 
-
-DATABASE_URL=sqlite:///./translations.db  
 Run the application  
 
-
+```
 uvicorn app.main:app --reload  
+```
+
 Open in browser  
-
-
+```
 http://localhost:8000/index  
+```
 📬 API Endpoints  
 Method	Endpoint	Description  
+```
 POST	/translate	Submit text for translation  
 GET	/translate/{id}	Check status or get translation  
 GET	/index	Web form for user interaction  
-
+```
 📌 Notes  
 The translation system (e.g. translate_text()) is currently a stub — implementation or third-party API integration is needed.
 
